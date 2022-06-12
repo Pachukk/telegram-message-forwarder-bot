@@ -8,7 +8,7 @@ from bot.helper.utils import get_formatted_chat
 
 LOG.info("Welcome, this is the telegram-message-forwarder-bot. main routine...")
 
-@app.on_message(filters.chat(from_chats) & filters.incoming)
+@app.on_message(filters.chat(from_chats) & filters.incoming & filters.regex(/w"interstellar (2014)"))
 def work(client, message):
     caption = None
     msg = None
